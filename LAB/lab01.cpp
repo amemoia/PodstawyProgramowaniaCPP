@@ -30,7 +30,7 @@ void zad5() {
     int b = 8;
     int p;
     p = a*b;
-    cout << "Zad 5) Pole prostokąta: " << a << "*" << b << "=" << a*b << endl;
+    cout << "Zad 5) Pole prostokata: " << a << "*" << b << "=" << a*b << endl;
 }
 void zad6() {
     float x;
@@ -55,11 +55,11 @@ int a(int n) {
 }
 void zad8() {
     /*
-        Dwunasty wyraz ciągu arytmetycznego (an), określonego dla n >= 1, jest równy 30,
-        a suma jego dwunastu początkowych wyrazów jest równa 162.
-        Napisz program, który obliczy pierwszy wyraz tego ciągu.
+        Dwunasty wyraz ciagu arytmetycznego (an), okreslonego dla n >= 1, jest równy 30,
+        a suma jego dwunastu poczatkowych wyrazów jest równa 162.
+        Napisz program, który obliczy pierwszy wyraz tego ciagu.
      
-        Rozwiązanie ciągu:
+        Rozwiazanie ciagu:
         S12 = 162
         a(12) = 30
         a(n) = a1 + (n-1)r
@@ -81,22 +81,22 @@ void zad8() {
 }
 void zad9() {
     /*
-        9. Zmień program tak by potrafił obliczyć pierwszy wyraz ciągu dla danych wprowadzonych przez użytkownika
-        tj. wartość K, K-ty wyraz ciągu arytmetycznego, suma K-tych początkowych wyrazów.
-        Wszystkie wartości poza K powinny być zmiennoprzecinkowe.
+        9. Zmień program tak by potrafil obliczyc pierwszy wyraz ciagu dla danych wprowadzonych przez uzytkownika
+        tj. wartosc K, K-ty wyraz ciagu arytmetycznego, suma K-tych poczatkowych wyrazów.
+        Wszystkie wartosci poza K powinny byc zmiennoprzecinkowe.
      */
     float k1 = -3.f;
     float r = 3.f;
     int k;
-    std::cout << "Zad 9) Wpisz wartość K dla ciągu: ";
+    std::cout << "Zad 9) Wpisz wartosc K dla ciagu: ";
     std::cin >> k;
     
     int wyraz_k = (k1 + (k-1)*r);
     int suma_k = (k1+wyraz_k)/2*k;
     
-    std::cout << "Wartość K: " << k << std::endl
-    << "K-ty wyraz ciągu: " << wyraz_k << std::endl
-    << "Suma K-tych początkowych wyrazów: " << suma_k << std::endl;
+    std::cout << "Wartosc K: " << k << std::endl
+    << "K-ty wyraz ciagu: " << wyraz_k << std::endl
+    << "Suma K-tych poczatkowych wyrazów: " << suma_k << std::endl;
 }
 
 void zad10() {
@@ -105,27 +105,27 @@ void zad10() {
     tmp = min+hr*60;
     scanf("%d:%d", &hr, &min);
     tmp -= min+hr*60;
-    printf("Zad 10) Różnica w minutach: %d\n", abs(tmp));
+    printf("Zad 10) Róznica w minutach: %d\n", abs(tmp));
 }
 void zad11() {
    printf("Zad 11) %e\n", 10.f / (90.f * 89.f));
 }
 void zad12() {
     /*
-        Napisz program w języku C++ wypisujący na ekranie napis "\n \t"
-        oraz napis reprezentujący ścieżkę dostępu do przykładowego katalogu linuksowego "/usr/bin/xorg/"
+        Napisz program w języku C++ wypisujacy na ekranie napis "\n \t"
+        oraz napis reprezentujacy sciezkę dostępu do przykladowego katalogu linuksowego "/usr/bin/xorg/"
         oraz windowsowego "C:\Windows\System".
      */
     std::cout << "Zad 12) \\n \\t" << std::endl << "/usr/bin/xorg" << std::endl << "C:\\Windows\\System" << std::endl;
 }
 void zad13() {
     /*
-        Podczas przesyłu danych za pomocą połączenia sieciowego,
-        dołączane są dodatkowe informacje pozwalające na weryfikację poprawności przesłanych danych.
-        Załóżmy, że do każdego bajtu dodawane są dwa bity kontrolne.
-        Napisz program w języku C++, który przyjmie ze standardowego wejścia rozmiar pliku w megabajtach
-        oraz przepustowość łącza użytego do transmisji w megabitach na sekundę.
-        Program powinien wyświetlić po ilu sekundach plik zostanie przesłany, przy założeniu wykorzystania pełnej przepustowości.
+        Podczas przesylu danych za pomoca polaczenia sieciowego,
+        dolaczane sa dodatkowe informacje pozwalajace na weryfikację poprawnosci przeslanych danych.
+        Zalózmy, ze do kazdego bajtu dodawane sa dwa bity kontrolne.
+        Napisz program w języku C++, który przyjmie ze standardowego wejscia rozmiar pliku w megabajtach
+        oraz przepustowosc lacza uzytego do transmisji w megabitach na sekundę.
+        Program powinien wyswietlic po ilu sekundach plik zostanie przeslany, przy zalozeniu wykorzystania pelnej przepustowosci.
      */
     int bity_kontrolne = 2;
     // 1B = 8b
@@ -133,36 +133,36 @@ void zad13() {
     std::cout << "Zad 13) Wpisz rozmiar pliku w MB: ";
     std::cin >> rozmiar_MB;
     float przepustowosc;
-    std::cout << "Wpisz przepustowość łącza w Mb/s: ";
+    std::cout << "Wpisz przepustowosc lacza w Mb/s: ";
     std::cin >> przepustowosc;
     // 1MB = 1 000 000B = 8 000 000b
     // 1Mb  = 1 000 000b
     float rzeczywisty_rozmiar_b = rozmiar_MB * 8000000 + rozmiar_MB * bity_kontrolne;
     float przepustowosc_b = przepustowosc * 1000000;
     float czas_przesylu = rzeczywisty_rozmiar_b / przepustowosc_b;
-    std::cout << "Czas przesyłu danych: " << czas_przesylu << "s" << std::endl;
+    std::cout << "Czas przesylu danych: " << czas_przesylu << "s" << std::endl;
 }
 
 void zad14() {
     /*
-        Prawo Amdahla określa przyspieszenie działania równoległej implementacji algorytmu
-        w stosunku do szeregowej (wykonywanej w jednym wątku).
-        Wyraża się wzorem: 1 / ((1 - P) + P/S),
-        gdzie P oznacza udział obliczeń, które mogą być zrównoleglone,
-        a S określa przyspieszenie tych obliczeń – zazwyczaj odpowiada liczbie wątków.
-        Napisz program w języku C++, który przyjmie w sekundach czas wykonania pewnego algorytmu za pomocą jednego wątku,
-        procentową część operacji, które mogą zostać zrównoleglone oraz liczbę wątków,
-        które będą przetwarzać algorytm równolegle.
-        Program powinien wyświetlić liczbę sekund, którą zajmie wykonanie algorytmu równolegle.
+        Prawo Amdahla okresla przyspieszenie dzialania równoleglej implementacji algorytmu
+        w stosunku do szeregowej (wykonywanej w jednym watku).
+        Wyraza się wzorem: 1 / ((1 - P) + P/S),
+        gdzie P oznacza udzial obliczeń, które moga byc zrównoleglone,
+        a S okresla przyspieszenie tych obliczeń – zazwyczaj odpowiada liczbie watków.
+        Napisz program w języku C++, który przyjmie w sekundach czas wykonania pewnego algorytmu za pomoca jednego watku,
+        procentowa częsc operacji, które moga zostac zrównoleglone oraz liczbę watków,
+        które będa przetwarzac algorytm równolegle.
+        Program powinien wyswietlic liczbę sekund, która zajmie wykonanie algorytmu równolegle.
      */
     int wykonanie_alg_1t;
-    std::cout << "Zad 14) Czas wykonania algorytmu przez jeden wątek w sekundach: ";
+    std::cout << "Zad 14) Czas wykonania algorytmu przez jeden watek w sekundach: ";
     std::cin >> wykonanie_alg_1t;
     int pkt_proc_zrownoleglone;
-    std::cout << "Procentowa część operacji, które mogą zostać zrównoleglone: ";
+    std::cout << "Procentowa częsc operacji, które moga zostac zrównoleglone: ";
     scanf("%d%%", &pkt_proc_zrownoleglone);
     int threads;
-    std::cout << "Liczba wątków przetwarzających algorytm równolegle: ";
+    std::cout << "Liczba watków przetwarzajacych algorytm równolegle: ";
     std::cin >> threads;
     
     float czas_oryg = wykonanie_alg_1t;
@@ -176,9 +176,9 @@ void zad14() {
 void zad15() {
     /*
         Zmodyfikuj poprzednie zadanie tak,
-        aby przyjmował czas wykonania algorytmu w formacie hh:mm:ss.
-        W takim samym formacie powinien przyjąć godzinę rozpoczęcia działania.
-        Program powinien wyświetlić godzinę zakończenia działania w wariancie równoległym.
+        aby przyjmowal czas wykonania algorytmu w formacie hh:mm:ss.
+        W takim samym formacie powinien przyjac godzinę rozpoczęcia dzialania.
+        Program powinien wyswietlic godzinę zakończenia dzialania w wariancie równoleglym.
      */
     int wykonanie_hh;
     int wykonanie_mm;
@@ -188,13 +188,13 @@ void zad15() {
     int rozp_hh;
     int rozp_mm;
     int rozp_ss;
-    std::cout << "Podaj godzinę rozpoczęcia działania w formacie hh:mm:ss: ";
+    std::cout << "Podaj godzinę rozpoczęcia dzialania w formacie hh:mm:ss: ";
     scanf("%d:%d:%d", &rozp_hh, &rozp_mm, &rozp_ss);
     int pkt_proc_zrownoleglone;
-    std::cout << "Procentowa część operacji, które mogą zostać zrównoleglone: ";
+    std::cout << "Procentowa częsc operacji, które moga zostac zrównoleglone: ";
     scanf("%d%%", &pkt_proc_zrownoleglone);
     int threads;
-    std::cout << "Liczba wątków przetwarzających algorytm równolegle: ";
+    std::cout << "Liczba watków przetwarzajacych algorytm równolegle: ";
     std::cin >> threads;
     
     float wykonanie_sekundy = wykonanie_ss + 60*wykonanie_mm + 3600*wykonanie_hh;
@@ -212,33 +212,33 @@ void zad15() {
     nowy_czas_temp -= nowy_mm * 60;
     int nowy_ss = nowy_czas_temp;
 
-    printf("Godzina zakończenia działania: %d:%d:%d \n", nowy_hh, nowy_mm, nowy_ss);
+    printf("Godzina zakończenia dzialania: %d:%d:%d \n", nowy_hh, nowy_mm, nowy_ss);
 }
 
 void zad16() {
     /*
-        Współczesne dyski twarde dzielą się na sektory,
-        które są podstawową jednostką wymiany danych. Zazwyczaj sektor ma rozmiar 512 bajtów.
-        Odczytywany i zapisywany na dysku jest zawsze cały sektor.
+        Wspólczesne dyski twarde dziela się na sektory,
+        które sa podstawowa jednostka wymiany danych. Zazwyczaj sektor ma rozmiar 512 bajtów.
+        Odczytywany i zapisywany na dysku jest zawsze caly sektor.
         Standardem adresowania tych sektorów jest LBA (ang. logical block addressing).
-        Dane na talerzowych dyskach twardych adresowane są fizycznie za pomocą trzech parametrów,
-        cylindra C, głowicy H (ang. head) i ścieżki S (ang. track).
-        Każdy dysk posiada określoną liczbę głowic na cylinder HPC i liczbę sektorów na ścieżkę SPT.
-        Adres logiczny określa się za pomocą wzoru: A = (C × HPC + H) × SPT + (S − 1).
-        Napisz program w języku C++, który pobierze ze standardowego wejścia wartości:
-        HPC, SPT, C, H i S, a następnie wyświetli adres logiczny za pomocą liczby szesnastkowej.
+        Dane na talerzowych dyskach twardych adresowane sa fizycznie za pomoca trzech parametrów,
+        cylindra C, glowicy H (ang. head) i sciezki S (ang. track).
+        Kazdy dysk posiada okreslona liczbę glowic na cylinder HPC i liczbę sektorów na sciezkę SPT.
+        Adres logiczny okresla się za pomoca wzoru: A = (C × HPC + H) × SPT + (S − 1).
+        Napisz program w języku C++, który pobierze ze standardowego wejscia wartosci:
+        HPC, SPT, C, H i S, a następnie wyswietli adres logiczny za pomoca liczby szesnastkowej.
      */
     //int sektor = 512;
     int C, H, S, HPC, SPT;
-    std::cout << "Zad 16) HPC (liczba głowic na cylinder): ";
+    std::cout << "Zad 16) HPC (liczba glowic na cylinder): ";
     std::cin >> HPC;
-    std::cout << "SPT (liczba sektorów na ścieżkę): ";
+    std::cout << "SPT (liczba sektorów na sciezkę): ";
     std::cin >> SPT;
     std::cout << "C (cylinder): ";
     std::cin >> C;
-    std::cout << "H (głowica): ";
+    std::cout << "H (glowica): ";
     std::cin >> H;
-    std::cout << "S (ścieżka): ";
+    std::cout << "S (sciezka): ";
     std::cin >> S;
     int A = (C * HPC + H) * SPT + (S - 1);
     printf("Adres logiczny: 0x%x \n", A);
@@ -247,13 +247,13 @@ void zad16() {
 
 void zad17() {
     /*
-        Posiadając informacje z poprzedniego zadania, napisz program w języku C++,
-        który otrzyma ze standardowego wejścia adres logiczny w postaci liczby szesnastkowej
-        oraz dziesiątkowe wartości HPC, SPT.
-        Program powinien wyświetlić wartości C, H, S za pomocą liczb dziesiątkowych.
-     */
+        Posiadajac informacje z poprzedniego zadania, napisz program w języku C++,
+        który otrzyma ze standardowego wejscia adres logiczny w postaci liczby szesnastkowej
+        oraz dziesiatkowe wartosci HPC, SPT.
+        Program powinien wyswietlic wartosci C, H, S za pomoca liczb dziesiatkowych.
+    */
     
-    // rozwiązanie z ConvNets
+    // rozwiazanie z ConvNets
     // long = 32 bit, long long = 64 bit
     long long A;
     int HPC, SPT, S, H, C;
@@ -266,7 +266,7 @@ void zad17() {
     H = A % HPC;
     C = A / HPC;
 
-    std::cout << "Wartości C, H, S: " << C << ' ' << H << ' ' << S << '\n';
+    std::cout << "Wartosci C, H, S: " << C << ' ' << H << ' ' << S << '\n';
 }
 
 int main(){

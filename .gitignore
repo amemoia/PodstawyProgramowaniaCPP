@@ -2,3 +2,5 @@
 *.pbxproj
 *.xcworkspacedata
 *.plist
+/.vscode
+/LAB/lab01.dSYM
