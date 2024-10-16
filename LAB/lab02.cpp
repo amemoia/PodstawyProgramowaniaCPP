@@ -206,8 +206,30 @@ void zad16() {
     float tranz = i4004 * pow(2, diff);
     printf("W roku %d procesory mialy ok. %.0f tranzystorow \n", user_yr, tranz);
 }
+void zad17() {
+    // Napisz program w języku C++, który pobierze ze standardowego wejścia
+    // rok i liczbę tranzystorów w procesorze. Program powinien wyświetlić,
+    // jaka jest różnica między liczbą tranzystorów w procesorze,
+    // a wynikającą z prawa Moore’a w roku jego produkcji.
+    // Wynik należy podać jako liczbę tranzystorów oraz
+    // procent liczby tranzystorów rzeczywistego procesora,
+    // zaokrąglony do dwóch liczb po przecinku.
+    double cpuTransCount;
+    int cpuYear;
+    int i4004 = 2250;
+    int i4004_yr = 1971;
+    printf("Zad 17)\nwpisz rok \n");
+    scanf("%d", &cpuYear);
+    printf("wpisz ilosc tranzystorow \n");
+    scanf("%lf", &cpuTransCount);
+    // roznica lat * 12 / 24 => roznica lat / 2
+    int yearDiff = cpuYear - i4004_yr;
+    double mooreTransCount = i4004 * pow(2, yearDiff/2.f);
+    float mooreRelativeToCpu = mooreTransCount / cpuTransCount;
+    printf("Moore (%d): %.0f (%.2f %%)", cpuYear, mooreTransCount, mooreRelativeToCpu);
+}
 
 int main() {
-    zad16();
+    zad17();
     return 0;
 }
