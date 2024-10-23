@@ -274,9 +274,7 @@ void zad15() {
     const int Size = 11;
     const int Value_Width = 4;
     for(int i = 0; i < Size; ++i) {
-        for(int j = 0; j < i+1; ++j) {
-            std::cout << std::setw(Value_Width) << i*j;
-        }
+        for(int j = 0; j < i+1; ++j) std::cout << std::setw(Value_Width) << i*j;
         // w praktyce std::cout << "\n" dziala szybciej niz std::cout << std::endl;
         std::cout << std::endl;
     }
@@ -286,8 +284,8 @@ void zad15_b() {
     // tabliczka mnozenia
     const int Size = 11;
     const int Value_Width = 4;
-    for(int i = 0; i < Size-i; ++i) {
-        for(int j = 0; j < Size; ++j) {
+    for(int i = 0; i < Size; ++i) {
+        for(int j = 0; j < i+1; ++j) {
             std::cout << std::setw(Value_Width) << i*j;
         }
         // w praktyce std::cout << "\n" dziala szybciej niz std::cout << std::endl;
@@ -296,6 +294,6 @@ void zad15_b() {
 }
 
 int main() {
-    zad15_b();
+    zad15();
     return 0;
 }
