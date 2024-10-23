@@ -1,7 +1,6 @@
 // Przygotowanie do lab02
 
 #include <iostream>
-#include <cstdio>
 #include <cmath>
 
 void zad01() {
