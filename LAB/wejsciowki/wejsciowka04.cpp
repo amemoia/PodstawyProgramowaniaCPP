@@ -7,7 +7,7 @@
 // Funkcja powinna wyświetlić n liczb pseudolosowych z przedziału <20;40>.
 
 int randomGen(int min, int max) {
-    return rand()%max+1 + (max-min) ;
+    return rand()%max+1 + (max-min);
 }
 
 void printRandomNum(int n) {
@@ -15,6 +15,11 @@ void printRandomNum(int n) {
         int x = randomGen(20, 40);
         std::cout << x << std::endl;
     }
+}
+
+void poprawneRozwiazanie(int n) {
+    srand(time(NULL));
+    for (int i = 0; i < n; ++i) std::cout << rand() % (40 + 1 - 20) + 20 << std::endl;
 }
 
 int main() {
