@@ -99,8 +99,10 @@ int main() {
     // std::cout << "\n";
     //printN(1, 25);
     unsigned int n, result;
+    printf("test");
     while(scanf("%u", &n) == 1) {
         result = fib_iter(n);
         printf("%u \n", result);
     }
+    return 0;
 }
