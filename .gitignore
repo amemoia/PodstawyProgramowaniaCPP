@@ -10,3 +10,5 @@ LAB/lab01
 a
 *.dSYM
 /LAB/.labs 01-05/Contents/
+PP 2425.xcodeproj/project.xcworkspace/
+*.DS_Store
